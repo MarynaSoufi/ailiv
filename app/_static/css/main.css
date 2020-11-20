@@ -1,23 +1,41 @@
+
+@font-face {
+    font-family:'h';
+    src: url('../fonts/h.woff2') format('woff2'),
+		url('../fonts/h.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family:'R';
+    src: url('../fonts/R.woff2') format('woff2'),
+		url('../fonts/R.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
 @font-face {
     font-family:'Bilingual Serif Alternate Font';
-    src: url('../_static/fonts/Bilingual Serif Alternate Font Regular.woff2') format('woff2'),
-		url('../_static/fonts/Bilingual Serif Alternate Font Regular.woff') format('woff');
+    src: url('../fonts/Bilingual Serif Alternate Font Regular.woff2') format('woff2'),
+		url('..//fonts/Bilingual Serif Alternate Font Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 @font-face {
     font-family:'Bilingual Serif Font';
-    src: url('../_static/fonts/Bilingual Serif Font Regular.woff2') format('woff2'),
-		url('../_static/fonts/Bilingual Serif Font Regular.woff') format('woff');
+    src: url('../fonts/Bilingual Serif Font Regular.woff2') format('woff2'),
+		url('../fonts/Bilingual Serif Font Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 @font-face {
     font-family:'SCRIPTKEREN';
-    src: url('../_static/fonts/SCRIPTKEREN.woff2') format('woff2'),
-		url('../_static/fonts/SCRIPTKEREN.woff') format('woff');
+    src: url('../fonts/SCRIPTKEREN.woff2') format('woff2'),
+		url('../fonts/SCRIPTKEREN.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -35,7 +53,7 @@
 
 body {
     margin: 0;
-    font-family: "Bilingual Serif Font", "Bilingual Serif Alternate Font", "SCRIPTKEREN", sans-serif; ;
+    font-family: "R", "h", "Bilingual Serif Font", "Bilingual Serif Alternate Font", "SCRIPTKEREN", sans-serif;
     font-weight: normal;
     font-size: 1rem;
     line-height: 2;
@@ -52,19 +70,22 @@ body {
 }
 h1{
     font-size: 3.25rem;
-    font-weight: bold;
+    font-weight: 400;
     color: var(--h1-a-color);
+    font-family: "Bilingual Serif Font", sans-serif;
 }
 h2 {
     font-size: 2.375rem;
     font-weight: bold;
     color: var(--h2-color);
+    font-family: "Bilingual Serif Font", sans-serif;
 }
 img {
     max-width: 100%;
 }
 a {
     text-decoration: none;
+    font-family: "R", sans-serif;
 }
 
 ul {
@@ -93,29 +114,28 @@ header {
 .main {
     display: none;
 }
-.main a { 
-    color: var(--nav-a-color);
-    transition: all .2s ease;
-    padding: .5rem;
-}
-.main a:hover {
-    color: var(--h2-color);
-}
 @media (min-width: 62rem) {
     .main {
         display: flex;
         color: var(#009E29);
-        flex-wrap: wrap;
-        font-size: 0.8125rem;
-        padding: 1rem;
-        width: auto;
+        justify-content: flex-end;
         text-transform: uppercase;
-        font-weight: 600;
     }
 }
+.main a { 
+    color: var(--nav-a-color);
+    transition: all .2s ease;
+    padding: .5rem;
+    font-size: 0.66rem;
+}
+.main a:hover {
+    color: var(--h2-color);
+}
+
 .contacts {
     font-size: 0.49rem;
     text-transform: uppercase;
+    font-family: "R";
 }  
 @media (min-width: 31rem) {
     .contacts {
@@ -130,7 +150,7 @@ header {
 }
 .contacts span {
     margin-right: .2rem; 
-    color: gray;
+    font-family: "h";
 }
 .contacts ul {
     display: flex;
@@ -156,6 +176,7 @@ nav {
     justify-content: space-between;
     margin-top: 1rem;
     align-items: center;
+    font-family: "R";
 }
 .mandje {
     background-color: var(--footer-btn-bg-color);
