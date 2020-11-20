@@ -387,6 +387,46 @@ blockquote header {
 .reison p {
     text-align: center;
 }
+/* .reison section {
+    width: 100%;
+} */
+.reison a {
+    color: var(--h1-a-color);
+    text-decoration: underline #f2d6e3;
+    font-size: 1.5rem;
+    transition: all .2s ease;
+    font-family: "Bilingual Serif Font";
+    display: block;
+    margin: 0 auto;
+}
+.reison a:hover {
+    text-decoration: underline var(--h1-a-color);
+}
+section {
+    /* display: flex; */
+}
+section div {
+    width: 22rem;
+    height:21.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
 .trouw {
-    background-image: url() ;
+    background-image: url(../media/weedings.jpeg);
+    box-shadow: 12px 12px 0px 0px #FFF8E1;
+   
+}
+.sezoen {
+    background-image: url(../media/sezoen.jpeg);
+    background-repeat: no-repeat;
+    box-shadow: 12px 12px 0px 0px #DFF4D7;
+}
+.rouw {
+    background-image: url(../media/rouw.jpeg);
+    background-repeat: no-repeat;
+    background-size: 35rem;
+    box-shadow: 12px 12px 0px 0px #F2D6E3;
 }
