@@ -73,7 +73,7 @@ body {
 .container {
     width: 80rem;
     max-width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     margin: 0 auto;
     /* border: 1px solid red; */
 }
@@ -314,6 +314,7 @@ blockquote header {
 } 
 /*SPECIAL*/
 .special {
+    padding: 0;
     margin-bottom: 3rem;
     margin-top: 3rem;
     text-align: center;
@@ -387,38 +388,85 @@ blockquote header {
 .reison p {
     text-align: center;
 }
-/* .reison section {
-    width: 100%;
-} */
 .reison a {
     color: var(--h1-a-color);
     text-decoration: underline #f2d6e3;
     font-size: 1.5rem;
     transition: all .2s ease;
     font-family: "Bilingual Serif Font";
-    display: block;
-    margin: 0 auto;
 }
 .reison a:hover {
     text-decoration: underline var(--h1-a-color);
 }
+.section__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+@media(min-width: 40rem) {
+    .section__wrap{
+       justify-content: space-around;
+    }
+    .section__wrap section:nth-child(3){
+        margin: 0 auto;
+    }
+}
+@media(min-width: 54rem) {
+    .section__wrap{
+        justify-content: space-between;
+     }
+}
+@media(min-width: 54rem) {
+    .section__wrap section:nth-child(3){
+        margin: 0;
+    }
+}
 section {
-    /* display: flex; */
+    align-self: center;
 }
 section div {
-    width: 22rem;
-    height:21.5rem;
+    width: 19rem;
+    height:18.5rem;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 25rem;
-    margin: 0 auto;
+    margin: 0;
     margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+@media(min-width: 40rem) {
+    section div {
+    width: 18rem;
+    height:17.5rem;
+    }
+}
+@media(min-width: 54rem) {
+    section div {
+        width: 18rem;
+        height:17.5rem;
+        }
+}
+@media(min-width: 75rem) {
+    section div {
+        width: 24rem;
+        height:23.5rem;
+        background-size: 30rem;
+        }
+}
+@media(min-width: 78.125rem) {
+    section div {
+        width: 25rem;
+        height:24.5rem;
+        background-size: 31rem;
+        }
 }
 .trouw {
     background-image: url(../media/weedings.jpeg);
     box-shadow: 12px 12px 0px 0px #FFF8E1;
    
 }
+
 .sezoen {
     background-image: url(../media/sezoen.jpeg);
     background-repeat: no-repeat;
@@ -429,4 +477,18 @@ section div {
     background-repeat: no-repeat;
     background-size: 35rem;
     box-shadow: 12px 12px 0px 0px #F2D6E3;
+}
+@media(min-width: 75rem) {
+    .rouw {
+        background-size: 37rem;
+    }
+}
+/*LOCATION*/
+.location {
+    background-color: var(--general-text-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+.location img {
+    margin-top: -4rem;
 }
