@@ -115,6 +115,9 @@ li {
 p {
     font-family: "h";
 }
+.logo {
+    width: 6rem;
+}
 @media(min-width: 54rem) {
 .logo {
     width: 6.25rem;
@@ -132,6 +135,8 @@ p {
 /*HEADER*/
 header {
     margin-top: 1rem;
+    /* z-index: 9999; 
+    position: relative;  */
 }
 .main {
     display: none;
@@ -241,6 +246,47 @@ nav {
         display: none;
     }
 }
+
+.modal {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: white;
+    z-index: 1;
+    margin-top: 15rem;
+    transition: all .2s ease;
+}
+.main__modal {
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 2;
+}
+.main__modal li {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.main__modal a {
+    color: var(--nav-a-color);
+}
+.main__modal a:hover {
+    color: var(--h2-color);
+}
+/* .hystmodal__opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+} */
 /*QUOTE*/
 .quote {
     background-color: var(--blockquote-bg-color);
@@ -788,5 +834,93 @@ footer p,
     }
 }
 
+/*GEPERSONALIZEERDE BLOEMWERK
+    BLOEMEN                 */
+
+.bloemen {
+    background-color: var(--blockquote-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    text-align: center;
+    align-items: center;
+}  
+.bloemen img {
+    margin-top: -2rem;
+    margin-left: -1rem;
+}
+@media(min-width: 48rem) {
+    .bloemen {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .bloemen > * {
+        width: 50%;
+    }
+    .bloemen div {
+        padding-right: 1rem;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    .bloemen p {
+        width: 80%;
+    }
+    .bloemen h1 {
+        font-size: 3.1875rem;
+    }
+}
+.bloemen__text p {
+    text-align: center;
+}
+@media(min-width: 48rem) {
+    .bloemen__text p {
+        font-size: 1.1rem;
+    }
+}
+/*EXAMPLE*/
+.example {
+    text-align: center;
+}
+.example__photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (min-width: 71rem) {
+    .example__photo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .example__photo > * {
+        width: 23%;
+    }
+}
+.example__photo div {
+    margin-left: .5rem;
+}
+.rare {
+   min-height: 17rem;
+}
+@media(min-width: 27.5rem) {
+    .rare {
+        min-height: 19.4rem;
+     }
+}
+@media (min-width: 71rem) {
+    .example__element img {
+        min-height: 18rem;
+    }
+}
+.example__back {
+    max-width: 22rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    background-color: var(--blockquote-bg-color);
+}
+
+.example__element {
+    transform: translateX(-1rem) translateY(-.5rem);
+}
 
 

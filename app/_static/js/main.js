@@ -31,7 +31,8 @@ const dataWebshop =  [
             this.shopContainer = document.querySelector(".webshop__choice");
             console.log(this.shopContainer);
             this.createWebshop();
-            this.burger = document.querySelector(".webshop__")
+            this.burger = document.querySelector(".burger");
+            this.modalBurger();
 
         },
         createWebshop () {
@@ -58,6 +59,27 @@ const dataWebshop =  [
                 }
                 return a;
                 
+        },
+        modalBurger () {
+            const modalWindow = document.querySelector(".modal");
+            this.burger.addEventListener( "click", function () {
+                if(modalWindow.style.visibility === "hidden") {
+                    modalWindow.style.visibility = "visible";
+                    modalWindow.style.transform = "translateY(0%)";
+                }else {
+                    modalWindow.style.visibility = "hidden";
+                    modalWindow.style.transform = "translateY(-25%)";
+                }
+
+            //     // Находим тег html и сохраняем его
+            // let html = document.documentElement;
+            // //сохраним текущую прокрутку:
+            // let scrollPosition = window.pageYOffset;
+            // //установим свойство top у html равное прокрутке
+            // html.style.top = -scrollPosition + "px";
+            // html.classList.add("hystmodal__opened");
+            }); 
+           
         }
         
 
