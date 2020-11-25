@@ -926,7 +926,13 @@ footer p,
 .message p {
     text-align: center;
 }
-
+.message__dark {
+    color: var(--general-text-color);
+    font-size: 1rem;
+}
+.message h2 {
+    font-size: 2.125rem;
+}
 .message {
     color: var(--location-p-color);
 }
@@ -987,6 +993,12 @@ footer p,
     margin-top: 1rem;
     border-radius: .6rem;
     color: #fff;
+    font-size: 1rem;
+}
+@media (min-width:47.9375rem) {
+    .message__form button {
+        margin-left: 0;
+    }
 }
 
 .message__form input,
