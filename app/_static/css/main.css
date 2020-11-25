@@ -922,5 +922,86 @@ footer p,
 .example__element {
     transform: translateX(-1rem) translateY(-.5rem);
 }
+.message h2,
+.message p {
+    text-align: center;
+}
+
+.message {
+    color: var(--location-p-color);
+}
+.message h3 {
+    color: var(--h2-color);
+    text-align: center;
+    font-size: 1.875rem;
+}
+.message__container {
+    background-color: var(--footer-btn-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+.message__container > * {
+    width: 100%;
+}
+@media (min-width:47.9375rem) {
+    .message__container > * {
+        width: 50%;
+    }
+    .message__container {
+        flex-wrap: nowrap;
+    }
+    .message__container div:last-child {
+        margin-top: 4.7rem;
+    }
+}
+
+.message__container a {
+    color: #00b62f;
+    text-decoration: underline;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+.message__form {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 1.5rem;
+    margin-bottom: 2rem;
+}    
+.message__form > * {
+    width: 100%;
+   
+}
+.message__form label
+ {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    text-transform: uppercase;
+}
+.message__form button {
+    width: 6rem;
+    padding:  .7rem;
+    background-color: var(--footer-btn-bg-color);
+    border: 1px solid var(--nav-a-color);
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-radius: .6rem;
+    color: #fff;
+}
+
+.message__form input,
+.message__form textarea{
+    border-radius: .6rem;
+    background-color: var(--h2-color);
+    color: black;
+    border: 1px solid #ccc;
+}
+.message__form textarea {
+    height: 6.25rem;
+}
+.message__form input {
+    height: 2.5rem;
+}
+
 
 
