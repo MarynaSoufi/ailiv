@@ -70,24 +70,21 @@ const dataWebshop =  [
            
         },
         scrollToTop() {
-            const scrollToTopBtn = document.querySelector(".toTopBtn");
-            //const rootElement = document.documentElement;
-            const y = window.pageYOffset;
-            const clientHeight = document.documentElement.clientHeight;
-            window.addEventListener("scroll",  function () {
-                if (y > clientHeight) {
-                    scrollToTopBtn.style.display = "block";
-                 } else if (y < clientHeight) {
-                    scrollToTopBtn.style.display = "none";
+            const scrollToTopBtn = document.querySelector(".toTop__wrapper");
+            //const y = window.pageYOffset;
+            //const clientHeight = document.documentElement.clientHeight;
+              window.addEventListener('scroll', function() {
+                // scrollToTopBtn.visible = (pageYOffset < document.documentElement.clientHeight);
+                if(pageYOffset >20){
+                    scrollToTopBtn.style.visibility = 'visible';
+                }else if(pageYOffset < document.documentElement.clientHeight) {
+                    scrollToTopBtn.style.visibility = 'hidden';
                 }
-            }); 
+              });
         },
         urlInlezen() {
-            //const quer = window.location.search;
             const params = new URLSearchParams(); 
             console.log(params);
-            //const boeketName = 
-
             this.links.forEach((e) =>{
                 console.log(e);
                 e.addEventListener('click',function(e) {
@@ -97,17 +94,6 @@ const dataWebshop =  [
                     window.location.href = e.target.href + `?${query}`;
                 });
             });
-            // we starten met een leeg URLSearchParams object
-            
-            // voeg type toe
-            // params.append('type', 'medium');
-            
-            // // omzetten naar query string
-            // const query = params.toString(); // type=medium
-            
-            // // gebruiken in url -> zelf ? toevoegen!
-            // const url = '/index.html?' + query;
-            // console.log(url); 
         },
         boeketPage(type) {
             const boeketPhoto = document.querySelector(".boeket__img-js");
@@ -120,9 +106,6 @@ const dataWebshop =  [
             const dataPrice = dataWebshop.find(d => d.class === type).price; 
             boeketPrice.innerHTML = "€ " + dataPrice;
         }
-        
-
-
     };
     app.init();
 })();

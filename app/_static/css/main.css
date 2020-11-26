@@ -759,7 +759,8 @@ footer p,
     position: fixed;
     bottom: 4rem;
     right: 2rem;
-
+    cursor: pointer;
+    visibility: hidden;
 }
 .toTopBtn {
     /* display: none; */
