@@ -27,6 +27,8 @@ const dataWebshop =  [
 (()=> {
     const app = {
         init(){
+            this.winkelCard = document.querySelector(".wrapper");
+            this.close = document.querySelector(".close-js");
             const urlParams = new URLSearchParams(window.location.search);
             const myParam = urlParams.get('type'); 
             if(myParam) {
@@ -41,6 +43,7 @@ const dataWebshop =  [
             this.modalBurger();
             this.scrollToTop();            
             this.urlInlezen();  
+            this.winkelCardModal();
         },
         createWebshop () {
             const shopContainer = document.querySelector(".webshop__choice");
@@ -71,12 +74,16 @@ const dataWebshop =  [
         },
         scrollToTop() {
             const scrollToTopBtn = document.querySelector(".toTop__wrapper");
-            //const y = window.pageYOffset;
-            //const clientHeight = document.documentElement.clientHeight;
+            var rootElement = document.documentElement;
               window.addEventListener('scroll', function() {
-                // scrollToTopBtn.visible = (pageYOffset < document.documentElement.clientHeight);
                 if(pageYOffset >20){
                     scrollToTopBtn.style.visibility = 'visible';
+                    scrollToTopBtn.addEventListener('click', function() {
+                        rootElement.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                          });
+                    });
                 }else if(pageYOffset < document.documentElement.clientHeight) {
                     scrollToTopBtn.style.visibility = 'hidden';
                 }
@@ -105,6 +112,21 @@ const dataWebshop =  [
             boeketName.innerHTML = dataName;    
             const dataPrice = dataWebshop.find(d => d.class === type).price; 
             boeketPrice.innerHTML = "€ " + dataPrice;
+        },
+        winkelCardModal() {
+            const modalWindow = document.querySelector(".card__modal");
+            this.winkelCard.addEventListener('click', function() {
+                modalWindow.style.display = 'block';
+            });
+            this.close.addEventListener('click', function() {
+                modalWindow.style.display = 'none';
+            });
+            modalWindow.addEventListener('click', function(e) {
+                if (e.target == modalWindow) {
+                    modalWindow.style.display = 'none';
+                }
+                
+            });
         }
     };
     app.init();
