@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../_static/css/main.css">
-    <script src="../../_static/js/main.js" defer async></script>
-    <title>Seizoensdecoratie</title>
+    <link rel="stylesheet" href="_static/css/main.css">
+    <script src="_static/js/main.js" defer async></script>
+    <title>Gepersonaloseerde bloemwerk</title>
 </head>
 <body>
-    <header class="container">
+    <header  id="up" class="container">
         <div class="contacts">
             <ul>
                 <li>
@@ -26,18 +26,18 @@
             </ul>
         </div>
         <nav>
-            <a href="../../index.html" class="logo">
-                <img src="../../_static/media/5f524d3da2ea757d10fbed70_ailiv-logo.svg" alt="logo">
+            <a href="index.html" class="logo">
+                <img src="_static/media/5f524d3da2ea757d10fbed70_ailiv-logo.svg" alt="logo">
             </a>
             <div class="nawigation_wrap">
                 <ul class="main">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../gepersonaloseerd-bloemwerk/index.html">Gepersonaliseerd bloemwerk</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gepersonalizeerde_bloemwerk.html">Gepersonaliseerd bloemwerk</a></li>
                     <li><a href="#">Trouwboeketen</a></li>
-                    <li><a href="index.html">Seizoensdecoratie</a></li>
-                    <li><a href=""#"">Rouwwerk</a></li>
+                    <li><a href="sezoendecoratie.html">Seizoensdecoratie</a></li>
+                    <li><a href="#">Rouwwerk</a></li>
                     <li><a href="#">Aankleding</a></li>
-                    <li><a href="../../webshop/index.html">Webshop</a></li>
+                    <li><a href ="webshop.html">Webshop</a></li>
                 </ul>
                 <div class="wrapper">
                     <div class="mandje">
@@ -46,25 +46,70 @@
                         </span>
                         <span class="mandje-amount">0</span>
                     </div>
-                    <img class="burger" src="../../_static/media/burger.svg" alt="">
+                    <img class="burger" src="_static/media/burger.svg" alt="">
                 </div>
             </div>
         </nav>
         <div class="modal">
             <nav>
                 <ul class="main__modal">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../gepersonaloseerd-bloemwerk/index.html">Gepersonaliseerd bloemwerk</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gepersonalizeerde_bloemwerk.html">Gepersonaliseerd bloemwerk</a></li>
                     <li><a href="#">Trouwboeketen</a></li>
-                    <li><a href="index.html">Seizoensdecoratie</a></li>
-                    <li><a href=""#"">Rouwwerk</a></li>
+                    <li><a href="sezoendecoratie.html">Seizoensdecoratie</a></li>
+                    <li><a href="#">Rouwwerk</a></li>
                     <li><a href="#">Aankleding</a></li>
-                    <li><a href="../../webshop/index.html">Webshop</a></li>
+                    <li><a href ="webshop.html">Webshop</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
+        <article class="bloemen container">
+                <img src="_static/media/bloemwerk.jpg" alt="bloemen">
+                <div class="bloemen__content">
+                    <h1>Bloemen à la carte</h1>
+                    <p>Ben je op zoek naar een bloemstuk gemaakt voor een speciale gelegenheid? Een bloemstuk op basis van een mooie vaas of decoratiestuk? Ik help je graag verder!</p>
+                </div>
+        </article>
+        <article class="bloemen__text container">
+            <p>Samen zoeken we naar de beste oplossing om met jouw eigen inbreng van een decoratieve vaas, schaal, pot … tot een mooi bloemstuk te komen.</p>
+            <p>Dus, haal die prachtige schaal, mooie &nbsp;vaas of andere vorm weer eens boven en na het beluisteren van uw wensen geven we er samen terug een tweede leven aan.</p>
+        </article>
+        <article class="example container">
+            <h2>Enkele voorbeelden</h2>
+            <p>Bekijk enkele referentiefotos</p>
+            <div class="example__photo">
+                <div>
+                    <div class="example__back">
+                        <div class="example__element">
+                            <img class="rare" src="_static/media/bloemwerk4.1.png"  alt="bloemen">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="example__back">
+                        <div class="example__element">
+                            <img src="_static/media/bloemwerk2.png" alt="bloemen">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="example__back">
+                        <div class="example__element">
+                            <img src="_static/media/bloemwerk3.png" alt="bloemen">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="example__back">
+                        <div class="example__element">
+                            <img src="_static/media/bloemwerk4.png" alt="bloemen">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
         <article class="message container">
             <h2>Interesse in gepersonaliseerd bloemwerk?</h2>
             <p class="message__dark">Stuur me gerust een bericht</p>
@@ -73,9 +118,9 @@
                     <h3>Contactformulier</h3>
                     <form  class="message__form" method="post">
                         <label for="name">Uw naam</label>
-                        <input type="text" id="name" name="name" maxlength="50"  pattern="[A-Za-z ]{1,32}"  placeholder="U naam.." required>
+                        <input type="text" id="name" name="name"  pattern="[A-Za-z ]{1,32}"  placeholder="U naam.." required>
                         <label for="e-mail">Uw e-mailadres</label>
-                        <input type="email" id="e-mail" name="e-mail" maxlength="50"required placeholder="U email adress..">
+                        <input type="email" id="e-mail" name="e-mail"required placeholder="U email adress..">
                         <label for="mobile">Uw telefoonnummer</label>
                         <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="U GSM nummer..">
                         <label for="date">Datum van de gelegenheid</label>
@@ -111,7 +156,7 @@
                 </div>
             </div>
             <div class="webshop__choice">
-
+                
             </div>
         </article>
     </main>
@@ -119,13 +164,13 @@
         <div class="container">
             <div class="footer__wrapper"> 
                 <ul class="footer__main">
-                    <li><a href="../../index.html">Home</a><span>–</span></li>
-                    <li><a href="../gepersonaloseerd-bloemwerk/index.html">Gepersonaliseerd bloemwerk</a><span>–</span></li>
-                    <li><a href="#">Trouwboeketen</a><span>–</span></li>
-                    <li><a href="index.html">Seizoensdecoratie</a><span>–</span></li>
-                    <li><a href="#">Rouwwerk</a><span>–</span></li>
-                    <li><a href="#">Aankleding</a><span>–</span></li>
-                    <li><a href="../../webshop/index.html">Webshop</a><span>–</span></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gepersonalizeerde_bloemwerk.html">Gepersonaliseerd bloemwerk</a></li>
+                    <li><a href="#">Trouwboeketen</a></li>
+                    <li><a href="sezoendecoratie.html">Seizoensdecoratie</a></li>
+                    <li><a href="#">Rouwwerk</a></li>
+                    <li><a href="#">Aankleding</a></li>
+                    <li><a href ="webshop.html">Webshop</a></li>
                     <li><a>Contact</a></li>
                 </ul>
                 <div class="footer__contacts">
@@ -151,6 +196,9 @@
                     Deze website werd met trots gemaakt door <a href="https://de-formatie.be/">De Formatie</a>
                 </div>
             </div>
+        </div>
+        <div class="toTop__wrapper">
+            <a class="toTopBtn" href="#up"><img src="_static/media/uparrow_arriba_1538 (1).png" alt="point"></a>
         </div>
     </footer>
 </body>

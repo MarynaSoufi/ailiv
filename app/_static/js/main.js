@@ -1,25 +1,25 @@
 const dataWebshop =  [
     {
         name: "Boeket small",
-        img: "media/small.png",
+        img: "_static/media/small.png",
         price: 30,
-        href: "product/boeket/index.html",
+        href: "boeket.html",
         class: "small"
     
     },
     {
         name: "Boeket medium",
-        img: "media/medium.png",
+        img: "_static/media/medium.png",
         price: 40,
-        href: "product/boeket/index.html" ,
+        href: "boeket.html" ,
         class: "medium"
     
     },
     {
         name: "Boeket large",
-        img: "media/large.png",
+        img: "_static/media/large.png",
         price: 50,
-        href: "product/boeket/index.html",
+        href: "boeket.html ",
         class: "large"
     }
 ];
@@ -32,11 +32,10 @@ const dataWebshop =  [
             if(myParam) {
                 this.boeketPage(myParam);
             }      
-            this.shopContainer = document.querySelector(".webshop__choice");
-            this.burger = document.querySelector(".burger");
-            if (window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/webshop/index.html" || window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/index.html" || window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/dienst/gepersonaloseerd-bloemwerk/index.html" || window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/dienst/seizoensdecoratie/index.html") {
+            if(window.location.pathname !== "/atwork-1_project_1-MarynaSoufi/app/boeket.html" || window.location.pathname !== "/atwork-1_project_1-MarynaSoufi/app/chekout.html") {
                 this.createWebshop();
             }
+            this.burger = document.querySelector(".burger");
             this.links = document.querySelectorAll(".elements__wrapper a");
             console.log(this.links);
             this.modalBurger();
@@ -44,40 +43,17 @@ const dataWebshop =  [
             this.urlInlezen();  
         },
         createWebshop () {
+            const shopContainer = document.querySelector(".webshop__choice");
             let str = "";
             dataWebshop.forEach(e => {
                 str = `<div class="elements__wrapper"><div class="webshop__back ${e.class}">
                     <div class="webshop__element ">
-                        <img src="${this.pathCondishion(e.img)}"alt="${e.name}">
+                        <img src="${e.img}"alt="${e.name}">
                     </div>
                 </div>
-                <a id="${e.class}" href="${this.pathForLnk(e.href)}">${e.name}</a><span>€ ${e.price}</span></div>`;
-                this.shopContainer.innerHTML += str;
+                <a id="${e.class}" href="${e.href}">${e.name}</a><span>€ ${e.price}</span></div>`;
+                shopContainer.innerHTML += str;
             });
-            
-        },
-        pathCondishion (img){
-            let a = "";
-                if (window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/index.html") {
-                   a = "_static/" +img;
-                }  else if (window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/webshop/index.html") {
-                    a = "../_static/" + img;
-                } else if (window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/dienst/gepersonaloseerd-bloemwerk/index.html" || window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/dienst/seizoensdecoratie/index.html") {
-                    a = "../../_static/" + img;
-                }
-                return a;
-                
-        },
-        pathForLnk (link)  {
-            let a = "";
-                if (window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/dienst/gepersonaloseerd-bloemwerk/index.html" || window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/dienst/seizoensdecoratie/index.html") {
-                    a = "../../" + link;
-                }else if (window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/webshop/index.html") {
-                    a = "../" + link;
-                }else {
-                    a = link;
-                }
-                return a;
             
         },
         modalBurger () {
@@ -94,48 +70,31 @@ const dataWebshop =  [
            
         },
         scrollToTop() {
-            const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
-            const rootElement = document.documentElement;
+            const scrollToTopBtn = document.querySelector(".toTopBtn");
+            //const rootElement = document.documentElement;
             const y = window.pageYOffset;
             const clientHeight = document.documentElement.clientHeight;
-
-            function scrollToTop() {
-                 rootElement.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                 });
-            }  
-            scrollToTopBtn.addEventListener("click",scrollToTop);   
-         
-
-            // window.addEventListener("scroll",  function () {
-            //     if (y > clientHeight) {
-            //         scrollToTopBtn.style.display = "block";
-            //      } else {
-            //         scrollToTopBtn.style.display = "none";
-            //     }
-            // });
-            
-            //    
-            //     });
-            // });
+            window.addEventListener("scroll",  function () {
+                if (y > clientHeight) {
+                    scrollToTopBtn.style.display = "block";
+                 } else if (y < clientHeight) {
+                    scrollToTopBtn.style.display = "none";
+                }
+            }); 
         },
         urlInlezen() {
-            const quer = window.location.search;
-            console.log(quer);
+            //const quer = window.location.search;
             const params = new URLSearchParams(); 
             console.log(params);
             //const boeketName = 
 
-            this.links.forEach((e,i) =>{
+            this.links.forEach((e) =>{
                 console.log(e);
-                // console.log(i);
                 e.addEventListener('click',function(e) {
                     e.preventDefault();
                     params.append('type', e.target.id);
                     const query = params.toString();
                     window.location.href = e.target.href + `?${query}`;
-                    
                 });
             });
             // we starten met een leeg URLSearchParams object
@@ -155,7 +114,7 @@ const dataWebshop =  [
             const boeketName = document.querySelector(".boeket__name-js");
             const boeketPrice = document.querySelector(".boeket__kost-js");
             const imgUrl = dataWebshop.find(d => d.class === type).img;
-            boeketPhoto.src = "../../_static/" + imgUrl; 
+            boeketPhoto.src = imgUrl; 
             const dataName =  dataWebshop.find(d => d.class === type).name; 
             boeketName.innerHTML = dataName;    
             const dataPrice = dataWebshop.find(d => d.class === type).price; 

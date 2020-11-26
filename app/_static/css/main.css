@@ -61,12 +61,14 @@
 
 /*GENERAL*/
 
-body {
+body,
+html {
     margin: 0;
     font-family: "R", "h", "Bilingual Serif Font", "Bilingual Serif Alternate Font", "SCRIPTKEREN", sans-serif;
     font-weight: normal;
     font-size: 1rem;
     color: var(--general-text-color);
+    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -281,12 +283,6 @@ nav {
 .main__modal a:hover {
     color: var(--h2-color);
 }
-/* .hystmodal__opened {
-    position: fixed;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-} */
 /*QUOTE*/
 .quote {
     background-color: var(--blockquote-bg-color);
@@ -758,17 +754,15 @@ footer p,
         font-size: 0.8rem;  
     }
 }
-.scrollToTopBtn {
+.toTop__wrapper {
+    width: 2.5rem;
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+
+}
+.toTopBtn {
     /* display: none; */
-    background-color: black;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 48px;
-    margin: 0 auto;
-    width: 48px;
 }
 
 /* .top-link__show{
