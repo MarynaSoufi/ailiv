@@ -64,5 +64,85 @@
             </nav>
         </div>
     </header>
+    <article class="boeket container">
+        <div class="boeket__wrap">
+            <img class="boeket__img-js" src="../../_static/media/medium.png" alt="">
+            <div class="form__wrapper">
+                <h1 class="boeket__name-js">Boeket medium</h1>
+                <div class="boeket__kost boeket__kost-js">€ 40</div>
+                <div class="lent"></div>
+                <form class="boeket__form" method="post">
+                    <label for="color">KLEUR</label>
+                    <select name="color" id="color" required>
+                        <option >Keuze: Kleur</option>
+                        <option value="1">Wit</option>
+                        <option value="2">Gemengd</option>
+                    </select>
+                    <label for="vaas">Vaas bijbestellen</label>
+                    <select name="vaas" id="vaas" required>
+                        <option>Keuze: Vaas bijbestellen</option>
+                        <option value="3">Ja</option>
+                        <option value="4">Nee</option>
+                    </select>
+                    <label for="bindwijze">Bindwijze</label>
+                    <select name="bindwijze" id="bindwijze" required>
+                        <option>Keuze: Bindwijze</option>
+                        <option value="5">Kortgebonden stelen</option>
+                        <option value="6">Langgebonden stelen</option>
+                    </select>
+                    <label for="aantal">Aantal</label>
+                    <div class="boeket__btn-wrapper">
+                        <input type="number" min="1" max="1000" pattern="[0-9]{10}" value="1" required>
+                        <input class="boeket__btn"  type="submit" value="Voeg toe aan winkelmandje">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="boeket__descr">
+            <h2>Hoe een boeket langer bewaren?</h2>
+            <p>Zorg er altijd voor dat je vaas brandschoon is en snijd de stelen van de bloemen onderaan ook best na een viertal dagen eens schuin af met een mesje terwijl je het water ververst. Indien gewenst kan het meegeleverde bloemenvoedsel aan het water toegevoegd worden.</p>
+            <h4>Verzorgingstips in water</h4>
+            <p>Zorg ervoor dat er geen dorre blaadjes in het water terechtkomen , want die geven bacteriën . Gebruik bij voorkeur leidingwater en voeg eventueel een klein druppeltje javel toe .</p>
+        </div>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="footer__wrapper"> 
+                <ul class="footer__main">
+                    <li><a href="index.html">Home</a><span>–</span></li>
+                    <li><a href="dienst/gepersonaloseerd-bloemwerk/index.html">Gepersonaliseerd bloemwerk</a><span>–</span></li>
+                    <li><a href="#">Trouwboeketen</a><span>–</span></li>
+                    <li><a href="dienst/seizoensdecoratie/index.html">Seizoensdecoratie</a><span>–</span></li>
+                    <li><a href="#">Rouwwerk</a><span>–</span></li>
+                    <li><a href="#">Aankleding</a><span>–</span></li>
+                    <li><a href ="webshop/index.html">Webshop</a><span>–</span></li>
+                    <li><a>Contact</a></li>
+                </ul>
+                <div class="footer__contacts">
+                    <ul>
+                        <li>
+                            <a href="tel:+32474992345"><span>GSM</span>0474992345</a>
+                        </li>
+                        <li>
+                           <a href="mailto: lievecortier@ailiv.be"><span>E-MAIL</span>lievecortier@ailiv.be</a>
+                        </li>
+                    </ul>
+                   
+                    
+               </div>
+            </div>
+            <p>Copyright © 2020 Ailiv, Lieve Cortier. Alle rechten voorbehouden. – Grootmoers 3, 8730 Oedelem – Ondernemingsnummer 0749.728.044</p>
+            <div class="cookies__wrapper">
+                <div class="cookies">
+                    <a href="#">Algemene voorwaarden</a>
+                    <a href="#">Beheer cookies</a>
+                </div>
+                <div class="thin">
+                    Deze website werd met trots gemaakt door <a href="https://de-formatie.be/">De Formatie</a>
+                </div>
+            </div>
+        </div>
+        <a><button class="scrollToTopBtn">☝️</button></a>
+    </footer>
 </body>
 </html>
