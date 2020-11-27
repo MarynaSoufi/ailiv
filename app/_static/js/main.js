@@ -27,7 +27,7 @@ const dataWebshop =  [
 (()=> {
     const app = {
         init(){
-            this.winkelCard = document.querySelector(".wrapper");
+            this.winkelCard = document.querySelector(".mandje");
             this.close = document.querySelector(".close-js");
             const urlParams = new URLSearchParams(window.location.search);
             const myParam = urlParams.get('type'); 

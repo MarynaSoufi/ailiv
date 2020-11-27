@@ -66,13 +66,64 @@
     </header>
     <article class="besteling">
         <div class="container">
-            <div class="besteling__overzicht">
-                <h4>Overzicht van uw besteling</h4>
-                <div class="besteling__overzicht-line"></div>
-                <div></div>
-            </div>
-            <div></div>
-            <div></div>
+                <div class="besteling__overzicht">
+                    <h4>Overzicht van uw besteling</h4>
+                    <div class="besteling__overzicht-line"></div>
+                    <div class="besteling__wrap">
+                        <div class="besteling__content-wrapper">
+                            <img class="besteling-img" src="_static/media/medium.png" alt="bloemen">
+                            <div class="besteling__content">
+                                <h5>BOEKET MEDIUM</h5>
+                                <div class="bestelling__aantal">Aantal: <span>1</span></div>
+                                <h5>Kleur:<span> Wit</span></h5>
+                                <h5>Vaas bijbestellen:<span> Ja</span></h5>
+                                <h5>Bindwijze:<span> Kortgebonden stelen</span></h5>
+                            </div>
+                        </div>
+                        <div class="besteling__price"><span>€ 40</span></div>
+                    </div>
+                </div>
+                <div class="besteling__klant-info">
+                    <div class="info__wrapper">
+                        <h4>Klanteninformatie</h4>
+                        <span>* Vereist</span>
+                    </div>
+                    <div class="besteling__overzicht-line"></div>
+                    <form class="besteling-form" method="post">
+                        <label for="email">EMAIL *</label> 
+                        <input type="email" id="email" name="email"required>
+                    </form>
+                </div>
+                <div class="besteling__adres">
+                    <div class="info__wrapper">
+                        <h4>Verzendadres</h4>
+                        <span>* Vereist</span>
+                    </div>
+                    <div class="besteling__overzicht-line"></div>
+                    <form class="besteling-form" method="post">
+                        <label for="name">NAAM *</label>
+                        <input class="nomargin" type="text" id="name" name="name"  pattern="[A-Za-z ]{1,32}"required>
+                        <label for="adr">Adres *</label>
+                        <input type="text" id="adr" name="adr1" pattern="(\d{1,}) [a-zA-Z0-9\s]+(\.)? [a-zA-Z]+(\,)? [A-Z]{2} [0-9]{5,6}"required>
+                        <input type="text" id="adr" name="adr2" pattern="(\d{1,}) [a-zA-Z0-9\s]+(\.)? [a-zA-Z]+(\,)? [A-Z]{2} [0-9]{5,6}">
+                        <div class="adres__wrap">
+                            <label for="gemeente">Gemeente *</label>
+                            <input type="text" id="gemeente" pattern="[A-Za-z ]{1,32}"required>
+                        </div>
+                        <div class="adres__wrap">
+                            <label for="provincie">Provincie</label>
+                            <input type="text" id="provincie" pattern="[A-Za-z ]{1,32}">
+                        </div>
+                        <div class="adres__wrap">
+                            <label for="post">Postcode *</label>
+                            <input class="margin_right" type="text" id="post" pattern="[0-9]{5}" required>
+                        </div>
+                        
+                        <select class="form" name="land" id="land" value="BE">Belgium</select>
+                        <option selected value="Belgium"></option>
+                        
+                    </form>
+                </div>
             <div></div>
             <div></div>
             <div></div>
