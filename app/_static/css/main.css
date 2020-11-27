@@ -893,6 +893,48 @@ footer p,
         font-size: 1.1rem;
     }
 }
+/*SEIZOENDECORATIE*/
+/*SEiZOEN*/
+.seizoen {
+    background-color: hsla(103.44827586206898, 56.86%, 90.00%, 1.00);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    text-align: center;
+    align-items: center;
+}
+.seizoen img {
+    margin-top: -2rem;
+    margin-left: -1rem;
+}
+@media(min-width: 48rem) {
+    .seizoen {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .seizoen > * {
+        width: 50%;
+    }
+    .seizoen div {
+        padding-right: 1rem;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    .seizoen p {
+        width: 80%;
+    }
+    .seizoen h1 {
+        font-size: 3.1875rem;
+    }
+}
+.seizoen__text {
+    text-align: center;
+}
+@media(min-width: 48rem) {
+    .seizoen__text p {
+        font-size: 1.1rem;
+    }
+}
 /*EXAMPLE*/
 .example {
     text-align: center;
@@ -938,6 +980,7 @@ footer p,
 .example__element {
     transform: translateX(-1rem) translateY(-.5rem);
 }
+/*MESSAGE*/
 .message h2,
 .message p {
     text-align: center;
@@ -1295,6 +1338,26 @@ footer p,
     padding: .5rem 0;
     border-radius: .6rem;
 }  
+
+/*CHEKOUT*/
+.besteling {
+    background-color: #f3f3f3;
+    height: auto;
+}
+.besteling .container {
+    background-color: #fff;
+    
+}
+.besteling__overzicht h4 {
+    color: var(--h2-color);
+    font-size: 1.125rem;
+}
+.besteling__overzicht-line {
+    width: 100%;
+    height: .09rem;
+    background-color:black;
+    opacity: .1;
+}
 
 
 

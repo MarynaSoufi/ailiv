@@ -125,7 +125,6 @@ const dataWebshop =  [
                 if (e.target == modalWindow) {
                     modalWindow.style.display = 'none';
                 }
-                
             });
         }
     };
