@@ -100,6 +100,7 @@ h2 {
 }
 img {
     max-width: 100%;
+    cursor: pointer;
 }
 a {
     text-decoration: none;
@@ -1413,7 +1414,7 @@ footer p,
     margin-right: 1rem;
     opacity: 0.7;
 }
-.besteling-form {
+.besteling-form  {
     display: flex;
     flex-wrap: wrap;
 }
@@ -1463,4 +1464,355 @@ select {
 .levering {
     background-color: #fff;
     margin-top: 1rem;
+}
+.shippping {
+    margin-bottom: 1rem;
+}
+.shippping p {
+    margin: 0;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    opacity: .6;
+    letter-spacing: 0;
+    font-family: "R";
+}
+.shippping label {
+    font-size: 0.875rem;
+    font-family: "R";
+    font-weight: 500;
+    padding-left: 1rem;
+}
+.shippping:last-child{
+    padding-bottom: .5rem;
+}
+.radio_wrap{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.radio_wrap > * {
+    width: 50%;
+}
+@media(min-width: 37.5rem) {
+    .radio_wrap > * {
+        width: auto;
+    }
+}
+.radio_wrap span {
+    text-align: right;
+}
+@media(min-width: 37.5rem) {
+    .radio_wrap span {
+        width: 4rem;
+    }
+}
+.radio_wrap div {
+    display: flex;
+    justify-content: center;
+}
+.shipping__info {
+    display: flex;
+    flex-wrap: wrap;
+}
+.shipping__info > * {
+    width: 100%;
+}
+.shipping__info  {
+    align-self: end;
+}
+.private-message {
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+.private-message h4{
+    font-size: 1.5rem;
+}
+.private-message input,
+textarea {
+    height: 2.67rem;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    padding-right: .3rem;
+    opacity: .8;
+    margin: 1rem;
+    margin-top: .5rem;
+}
+.private-message label {
+    margin-left: 1rem;
+    font-size: .8rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+.private-message textarea {
+    height: 4rem;
+    padding-top: 1rem;
+}
+.private-form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.private-form__wrapper > * {
+    width: 100%;
+}
+.chekbox label {
+    text-transform: none;
+    margin: 0;
+    padding-bottom: .4rem;
+    font-family: "R";
+    font-size: 1rem;
+}
+.chekbox input {
+    margin-right:.5rem;
+}
+.chekbox {
+    display: flex;
+    align-items: center;
+}
+.payment {
+    background-color: #fff;
+}
+.payment input,
+ textarea {
+    height: 2.67rem;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    padding-right: .3rem;
+    opacity: .8;
+    margin: 1rem;
+    margin-top: .5rem;
+}
+.payment label {
+    margin-left: 1rem;
+    font-size: .8rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+.payment__form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.payment__form > * {
+    width: 100%;
+}
+.pay__wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pay__wrap > * {
+    width: 100%;
+}
+.pay__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pay__wrapper > * {
+    width: 100%;
+}
+@media (min-width: 29.9375rem) {
+    .pay__wrapper > * {
+        width: 50%;
+    }
+}
+.pay__chekbox label {
+    text-transform: none;
+    margin: 0;
+    padding-bottom: .4rem;
+    font-family: "R";
+    font-size: 1rem;
+}
+.pay__chekbox input {
+    margin-right:.5rem;
+}
+.pay__chekbox {
+    display: flex;
+    align-items: center;
+}
+.if-not {
+    background-color: #fff;
+}
+.if-not__besteling-form  {
+    display: flex;
+    flex-wrap: wrap;
+}
+.if-not__besteling-form > * {
+    width: 100%;
+
+}
+.if-not__besteling-form  input,
+select {
+    height: 2.67rem;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    padding-right: .3rem;
+    opacity: .8;
+    margin: 1rem;
+    margin-top: .5rem;
+}
+.if-not__besteling-form label {
+    margin-left: 1rem;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
+.besteling__adres {
+    background-color: #fff;
+}
+.nomargin {
+    margin-bottom: 0 !important;
+}
+.adres__wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media(min-width: 29.9375rem) {
+    .adres__wrap {
+        width: 33%;
+    }
+    .margin_right {
+        margin-right: 0 !important;
+    }
+}
+.adres__wrap > * {
+    width: 100%;
+}
+.levering {
+    background-color: #fff;
+    margin-top: 1rem;
+}
+.overview {
+    background-color: #fff;
+    
+}
+.overview h4 {
+    color: var(--h2-color);
+    font-size: 1.125rem;
+    padding-top: 1rem;
+}
+.overview__content h5 {
+    font-family: "R";
+    font-size: 1rem;
+    padding-left: 1rem;
+    font-family: "h";
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    opacity: .6;
+}
+.opacity {
+    opacity: .6;
+}
+.overview__content div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.overview__content div span {
+    width: 5rem;
+    text-align: right;
+    padding-right: 1rem;
+}
+.total {
+    text-shadow: 0 0 .7px black;
+}
+/*LIGHTBOX - BLOEMEN*/
+.bloem-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+.bloem-modal__content {
+    position: relative;
+    /* background-color: #fefefe; */
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 75rem;
+}
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bloem-slide {
+    display: none;
+}
+  
+  .cursor {
+    cursor: pointer;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.next {
+    right: 0;
+}
+.prev {
+    left: 0;
+}
+.bloem-modal__content img {
+    margin-bottom: -4px;
+}
+.demo {
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
+}
+.column__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}  
+.column__wrapper > * {
+    width: 8rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+.column img {
+    width:8rem;
+    max-height: 7rem;
+    height: 6rem;
+}
+.bloem-slide {
+    margin-top: -5rem;
 }

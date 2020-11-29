@@ -45,6 +45,8 @@ const dataWebshop =  [
             this.scrollToTop();            
             this.urlInlezen();  
             this.winkelCardModal();
+            this.LightBox();
+            this.sameAdress();
         },
         createWebshop () {
             const shopContainer = document.querySelector(".webshop__choice");
@@ -134,7 +136,96 @@ const dataWebshop =  [
                     modalWindow.style.display = 'block';
                 });
             }
+        },
+        LightBox() {
+            const images = document.querySelectorAll(".example__element");
+            const imagesModal = document.querySelector(".bloem-modal");
+            const close = document.querySelector(".close");
+            const slide = document.querySelectorAll(".bloem-slide");
+            const column = document.querySelectorAll(".column");
+            const next = document.querySelector(".next");
+            const prev = document.querySelector(".prev");
+            if(window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/gepersonalizeerde_bloemwerk.html") {
+                images.forEach((e, i) =>{
+                    e.addEventListener('click', function() {
+                        imagesModal.style.display = "block";
+                        slide.forEach((f,n) => {
+                            if(i==n) {
+                                f.style.display = "block";
+
+                            }else {
+                                f.style.display = "none";
+                            }
+                        });
+                        column.forEach((e,k)=> {
+                            e.addEventListener("click",function() {
+                                slide.forEach((d, l)=> {
+                                    if(l == k) {
+                                        d.style.display = "block";
+                                    }else {
+                                        d.style.display = "none";
+                                    }
+                                });
+                            });
+                        });
+                    });
+                });
+                close.addEventListener('click', function() {
+                    imagesModal.style.display = "none";
+                });
+                imagesModal.addEventListener('click', function(e) {
+                    if (e.target == imagesModal) {
+                        imagesModal.style.display = 'none';
+                    }
+                });
+                next.addEventListener('click', function() {
+                    for (let i = 0; i < slide.length; i++) {
+                        slide[i].style.display = "none";
+                        
+                    }
+                    for (let i = 1; i < slide.length; i++) {
+                        if(slide[i].style.display == "none") {
+                            slide[i].style.display = "block";
+                            break;
+                        }
+                    } 
+                });
+                prev.addEventListener('click', function() {
+                    for (let i = 0; i < slide.length; i++) {
+                        slide[i].style.display = "none";
+                        if(slide[i +1].style.display == "none") {
+                            slide[i +1].style.display = "block";
+                            break;
+                        }    }
+                });
+            }
+        },
+        sameAdress() {
+            if(window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/chekout.html") {
+                const check = document.querySelector(".check-js");
+                const form = document.querySelector(".if-not");
+                check.addEventListener("change", function(e) {
+                    if(check.checked) {
+                        form.style.display = "none";
+                    }else {
+                        form.style.display = "block";
+                    }
+                })
+            }
         }
+        // hideContent(a) {
+        //     for (let i = a; i < slide.length; i++) {
+        //         slide[i].style.display = "none";
+        //     }
+        // },
+        // showTabContent(b) {
+        //     for (let i = b; i < slide.length; i++) {
+        //         if(slide[i].style.display == "none") {
+        //             slide.style.display = "block";
+        //         }
+        //     }  
+        // }
+
     };
     app.init();
 })();
