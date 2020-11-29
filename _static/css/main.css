@@ -1726,10 +1726,12 @@ footer p,
 .levering {
     background-color: #fff;
     margin-top: 1rem;
+    padding-top: 1rem;
 }
 
 .shippping {
     margin-bottom: 1rem;
+    background-color: #fff;
 }
 
 .shippping p {
@@ -1858,6 +1860,8 @@ textarea {
 
 .payment {
     background-color: #fff;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .payment input,
@@ -1931,6 +1935,7 @@ textarea {
 
 .if-not {
     background-color: #fff;
+    margin-bottom: 1rem;
 }
 
 .if-not__besteling-form {
@@ -1963,6 +1968,7 @@ select {
 
 .besteling__adres {
     background-color: #fff;
+    padding-top: 1rem;
 }
 
 .nomargin {
@@ -1997,6 +2003,7 @@ select {
 
 .overview {
     background-color: #fff;
+    padding-top: 1rem;
 
 }
 
