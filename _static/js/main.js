@@ -147,7 +147,7 @@ const dataWebshop =  [
             const column = document.querySelectorAll(".column");
             const next = document.querySelector(".next");
             const prev = document.querySelector(".prev");
-            if(window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/gepersonalizeerde_bloemwerk.html") {
+            if(window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/gepersonalizeerde_bloemwerk.html" || window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/sezoendecoratie.html") {
                 images.forEach((e, i) =>{
                     e.addEventListener('click', function() {
                         imagesModal.style.display = "block";
@@ -217,7 +217,7 @@ const dataWebshop =  [
                     }else {
                         form.style.display = "block";
                     }
-                })
+                });
             }
         }
         // hideContent(a) {
