@@ -1257,10 +1257,13 @@ footer p,
     background-color: var(--h2-color);
     color: black;
     border: 1px solid #ccc;
+    padding-left: 0.5rem;
 }
 
 .message__form textarea {
     height: 6.25rem;
+    margin: 0;
+    padding-top: 0.5rem;
 }
 
 .message__form input {
@@ -2044,6 +2047,23 @@ select {
     text-shadow: 0 0 .7px black;
 }
 
+.go-to__pay {
+    color: white;
+    background-color: var(--footer-btn-bg-color);
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: .6rem;
+    transition: all 3 linear;
+}
+.go-to__pay:hover {
+    background-color: #00b62f;
+}
 
 
 /*LIGHTBOX - BLOEMEN*/
@@ -2064,12 +2084,11 @@ select {
     position: relative;
     background-color:  rgba(0, 0, 0, 0.8);
     margin: auto;
-    height: 100%;
+   
     padding: 0;
     width: 90%;
     max-width: 75rem;
 }
-
 .close {
     color: white;
     position: absolute;
