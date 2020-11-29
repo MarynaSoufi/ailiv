@@ -132,7 +132,8 @@ const dataWebshop =  [
                 }
             });
             if(window.location.pathname === "/atwork-1_project_1-MarynaSoufi/app/boeket.html") {
-                this.btnToCard.addEventListener('click', function() {
+                this.btnToCard.addEventListener('click', function(e) {
+                    e.preventDefault();
                     modalWindow.style.display = 'block';
                 });
             }
