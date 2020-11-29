@@ -25,8 +25,9 @@ const dataWebshop =  [
 ];
 
 (()=> {
-    const app = {
-        init(){
+    const app = {        
+        init(){      
+            window.currentIndex = null;      
             this.btnToCard = document.querySelector(".boeket__btn");
             this.winkelCard = document.querySelector(".mandje");
             this.close = document.querySelector(".close-js");
@@ -153,6 +154,7 @@ const dataWebshop =  [
                         slide.forEach((f,n) => {
                             if(i==n) {
                                 f.style.display = "block";
+                                window.currentIndex = n;
 
                             }else {
                                 f.style.display = "none";
@@ -163,6 +165,7 @@ const dataWebshop =  [
                                 slide.forEach((d, l)=> {
                                     if(l == k) {
                                         d.style.display = "block";
+                                        window.currentIndex = l;
                                     }else {
                                         d.style.display = "none";
                                     }
@@ -184,20 +187,23 @@ const dataWebshop =  [
                         slide[i].style.display = "none";
                         
                     }
-                    for (let i = 1; i < slide.length; i++) {
-                        if(slide[i].style.display == "none") {
-                            slide[i].style.display = "block";
-                            break;
-                        }
-                    } 
+                    if(window.currentIndex >= 3){
+                        window.currentIndex = 0;
+                    } else {
+                        window.currentIndex++;
+                    }
+                    slide[window.currentIndex].style.display = "block";
                 });
                 prev.addEventListener('click', function() {
                     for (let i = 0; i < slide.length; i++) {
                         slide[i].style.display = "none";
-                        if(slide[i +1].style.display == "none") {
-                            slide[i +1].style.display = "block";
-                            break;
-                        }    }
+                    }       
+                    if(window.currentIndex <= 0){
+                        window.currentIndex = 3;
+                    } else {
+                        window.currentIndex--;
+                    }
+                    slide[window.currentIndex].style.display = "block";                
                 });
             }
         },
